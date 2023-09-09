@@ -1,0 +1,11 @@
+# Set the email address that should be used to contact you if there is a problem with 
+# your TLS certificates.
+{
+  email you@example.com
+}
+
+# Remove the http:// prefix from your site address.
+greenlight.alexedwards.net {
+  respond /debug/* "Not Permitted" 403
+  reverse_proxy localhost:4000
+}

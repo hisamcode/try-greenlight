@@ -41,7 +41,9 @@ hey -d "{\"email\": \"alice@example.com\", \"password\": \"pa55word\"}" -m "POST
 ```
 
 winget install GnuWin32.Make
+
 add env path C:\Program Files (x86)\GnuWin32\bin
+
 restart terminal
 
 go tool dist list
@@ -49,4 +51,25 @@ go tool dist list
 go env GOCACHE
 
 go build -a -o=/bin/foo ./cmd/foo        # Force all packages to be rebuilt
+
 go clean -cache                          # Remove everything from the build cache
+
+sudo systemctl status api
+
+ps -U greenlight
+
+sudo ufw allow 4000/tcp
+
+sudo ufw delete allow 4000/tcp
+
+sudo journalctl -u api
+
+https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs
+
+https://gist.github.com/ageis/f5595e59b1cddb1513d1b425a323db04
+
+https://caddyserver.com/docs/caddyfile
+
+example DNS record
+A     greenlight.alexedwards.net     161.35.71.158
+
