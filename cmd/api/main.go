@@ -15,11 +15,14 @@ import (
 	"github.com/hisamcode/try-greenlight/internal/data"
 	"github.com/hisamcode/try-greenlight/internal/jsonlog"
 	"github.com/hisamcode/try-greenlight/internal/mailer"
+	"github.com/hisamcode/try-greenlight/internal/vcs"
 	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"
 )
 
-const version = "1.0.0"
+var (
+	version = vcs.Version()
+)
 
 type config struct {
 	host string
